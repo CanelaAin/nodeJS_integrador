@@ -1,0 +1,103 @@
+/* Admin */
+.admin{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
+    padding: var(--espacio-16) 0;
+}
+
+.admin__busqueda{
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: var(--fuente-size-30);
+    min-width: 50%;
+}
+
+.admin__busqueda input{
+    display:block;
+    border-radius: 5px;
+    margin-left:var(--espacio-24);
+    height:30px;
+    box-sizing: content-box;
+    width:100%;
+}
+
+.admin__busqueda input::placeholder{
+    padding: 6px;
+    color:grey;
+}
+
+.admin__encabezado{
+    display:flex;
+    width:100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding:var(--espacio-16) 0;
+    font-family: var(--fuente-secundaria);
+}
+.admin__encabezado h1{
+    font-size: var(--fuente-size-46);
+    font-weight: 700;
+}
+.admin__encabezado a{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: var(--fuente-size-14);
+    
+}
+.admin__encabezado a span{
+    margin-right: var(--espacio-8);
+}
+
+.admin__listado{
+    width:100%;
+}
+.admin__listado table{
+ width:100%;
+ font-size: var(--fuente-size-16);
+}
+
+.admin__listado thead{
+    font-weight: bold;
+    text-align: left;
+}
+
+.listado__item td{
+    padding:var(--espacio-8) var(--espacio-12);
+    text-wrap: nowrap;
+}
+.listado__item td:nth-child(3){
+    text-wrap: wrap;
+}
+.listado__item iconify-icon{
+    padding: 0 var(--espacio-8);
+}
+
+.listado__item .item__edit{
+    color:var(--color-azul);
+}
+.listado__item .item__remove{
+    color:var(--color-rojo);
+}
+.listado__item td:nth-last-child(1),
+.listado__item td:nth-last-child(2) {
+    width: 1%;
+}
+.listado{
+    position:relative;
+}
+.listado__item .item__options span{
+    padding: 0 var(--espacio-12);
+    margin: 0 auto;
+}
+.listado__item .item__options{
+    text-wrap: nowrap;
+}
+/* fin Admin */

@@ -1,0 +1,127 @@
+/* banner */
+.banner{
+    background-image: url("/public/img/funkos-banner.webp");
+    background-size: cover;
+    background-attachment: fixed;
+    height:400px;
+    color:var(--fuente-color-blanco);
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    top:0;
+    left:0;
+    font-family: var(--fuente-secundaria);    
+}
+
+.banner::before{
+    content:"";
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    filter: blur(0.3);
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+
+.banner__content{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width:100%;
+    z-index: 2;
+    padding: 0 var(--espacio-24);
+}
+
+.banner__article{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:flex-start;
+}
+
+.banner__article h2{
+    font-size: var(--fuente-size-38);
+}
+
+.banner__article p{
+    font-size: var(--fuente-size-16);
+    padding-bottom: var(--espacio-48);
+}
+
+.banner__article a{
+    font-size: var(--fuente-size-18);
+    font-family: var(--fuente-principal);
+    color: var(--color-negro);
+    background-color: white;
+    border-radius: 50px;
+    padding:11px 78px;
+}
+
+/* fin banner */
+
+/* home articulos */
+.articulo{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 var(--espacio-24);
+}
+.articulo:nth-of-type(even){
+    flex-direction: row-reverse;
+}
+
+.articulo__descripcion{
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.articulo__descripcion .articulo__titulo{
+    font-family: var(--fuente-principal);
+    font-size: var(--fuente-size-46);
+}
+.articulo__descripcion p{
+    font-size:var(--fuente-size-18);
+    width:75%;
+}
+
+.articulo__descripcion hr{
+    border:var(--color-rojo) 1px solid;
+    width:100%;
+    margin:var(--espacio-16) 0;
+}
+
+.articulo__descripcion a{
+    font-family: var(--fuente-principal);
+    font-size: var(--fuente-size-24);
+    color: white;
+    background-color: var(--color-negro);
+    border-radius: 50px;
+    padding:11px 48px;
+}
+
+/* fin articulos home */
+/* Ultimos lanzamientos */
+.ultimosLanzamientos {
+    margin-bottom: var(--espacio-36);
+    max-width:100%;
+    padding:0 var(--espacio-24);
+}
+.ultimosLanzamientos h1{
+    font-size: var(--fuente-size-46);
+    text-transform: uppercase;
+    margin-bottom: var(--espacio-16);
+ }
+.ultimosLanzamientos__lista{
+    display:flex;
+    flex-direction: row;
+    gap:0 var(--espacio-36);
+    /* flex-wrap: wrap; */
+    justify-content: space-around;
+ }
+ 
+ 
+ /* fin ultimos lanzamientos */

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart | Funkoshop</title>
+    <link rel="stylesheet" href="/src/assets/css/index.css">
+</head>
+<body> 
+    <header> <!-- Inicio Header -->
+     </header> <!--   Fin Header -->
+    <main id="app">
+        <div class="container items_page">
+            <span>
+                <h1 class="compras_encabezado">CARRITO DE COMPRAS</h1>
+                <div class="extra"></div>
+            </span>
+            <div class="compras_tabla_filas compras_tabla fnt-700 encabezado">
+                <div class="flex-item">DETALLE PRODUCTO</div>
+                <div class="flex-item">CANTIDAD</div>
+                <div class="flex-item">TOTAL</div>
+                <div class="flex-item">&nbsp;</div>
+            </div>
+            <div v-if="cart.items.length === 0" class="compras_tabla_filas compras_tabla fnt-700 encabezado">
+                <div style="margin:0 auto;">EL CARRITO ESTA VACIO</div>
+            </div>
+            <itemcompra v-for="(item,index) in cart.items" :datos="items[item.indice]" :value="item.cantidad" @input="valor => updateCart(item.indice,valor)"></itemcompra>
+            
+            <section class="contenedor_resumen">
+            <div class="compras__resumen">
+                <span>
+                    <p class="resumen__titulo">RESUMEN</p>
+                </span>
+                <div class="resumen__valores">
+                    <div class="valores__fila">
+                        <p>CANTIDAD DE ELEMENTOS</p>
+                        <p>{{ this.cart.cartItems }}</p>
+                    </div>
+                    <div class="valores__fila">
+                        <p>SUBTOTAL</p>
+                        <p>{{this.cart.importe}}</p>
+                    </div>
+                    <div class="valores__fila">
+                        <p>ENVIO</p>
+                        <p>{{ this.cart.envio }}</p>
+                    </div>
+                    <hr>
+                    <div class="valores__fila">
+                        <p>TOTAL</p>
+                        <p>{{ this.cart.totalCart }}</p>
+                    </div>
+                </div>
+                <button>IR A PAGAR</button>
+            </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="/src/js/main.js"></script>
+    <script type="module" src="/src/js/vue.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop | Funkoshop</title>
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/pages/shop.css">
+</head>
+<body> 
+    <header> <!-- Inicio Header -->
+    </header> <!--   Fin Header -->
+    <main class="container">
+      <div  id="app" class="container dosColumnas">
+        <aside class="aside"> <!-- aside -->
+            <div class="aside__buscar">
+                <label for="item_o_categoria">BUSCAR</label>
+                <input type="text" id="item_o_categoria" placeholder="item o categoria">
+            </div>
+            <div class="aside__ordenar">
+                <label for="ordenar_por">ORDENAR POR</label>
+                <select id="ordenar_por" placeholder="Mayor a menor">
+                    <option>a</option>
+                    <option>b</option>
+                </select>
+            </div>
+            <div class="aside__precio">
+                <label>PRECIO</label>
+                <div class="aside_precio_input">
+                    <label for="precio_min">MIN</label>
+                    <input id="precio_min" type="number" maxlength="4">
+                    <span>-</span>
+                    <label for="precio_max">MAX</label>
+                    <input id="precio_max" type="number" maxlength="4">
+                </div>
+            </div>
+            <div class="aside__filtros">
+                <label for="filtros">FILTRAR</label>
+                <ul id="filtrar">
+                    <li>  
+                        <label>
+                            <input type="checkbox" name="nuevos">
+                            NUEVOS
+                        </label>
+                    </li>
+                    <li>  
+                        <label>
+                            <input type="checkbox" name="ofertas">
+                            OFERTAS
+                        </label>
+                    </li>
+                    <li>  
+                        <label>
+                            <input type="checkbox" name="edicion">
+                            EDICION
+                        </label>
+                    </li>
+                    <li>  
+                        <label>
+                            <input type="checkbox" name="especial">
+                            ESPECIAL
+                        </label>
+                    </li>
+                </ul>
+            </div>
+        </aside>    
+        <section class="listado"> <!-- Listado de articulos -->
+            <ul class="ultimosLanzamientos__lista">
+                <card :items="items.slice(0,3)"></card>
+            </ul>
+        </section>
+      </div>
+    </main>
+    <footer>
+    </footer>
+    <script src="/src/js/main.js"></script>
+    <script type="module" src="/src/js/vue.js"></script>
+</body>
+</html>

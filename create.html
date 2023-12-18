@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin-create</title>
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <picture>
+                <a href="./create.html">
+                    <img src="/img/branding/logo_light_horizontal.svg" alt="isologotipo">
+                </a>   
+            </picture>
+        
+            <ul>
+                <li>
+                    <a href="./pages/shop.html">Ver tienda</a>
+                </li>
+                <li>
+                    <a href="/pages/admin/admin.html">Admin</a>
+                </li>
+                <li>
+                    <a href="./pages/login.html">Salir</a>
+                </li>
+        
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Crear nuevo item</h1>
+        <form action="send" method="get">
+            <p>
+                <label for="categorias"> 
+                    <span>Categorias:</span>
+                </label> 
+                <select name="categorias" id="categorias">
+                     <option value="seleccionar">seleccionar</option>
+                </select>
+            </p>
+            <p>
+                <label for="licencia"> 
+                    <span>Licencia:</span>
+                </label> 
+                <select name="categorias" id="licencia">
+                     <option value="seleccionar">seleccionar</option>
+                </select>
+            </p>
+            <p>
+                <label for="nombre-producto"> 
+                    <span>Nombre del producto: </span>
+                </label>
+                <input type="text" id="nombre-producto" name="nombre-producto" value="Nombre del producto">
+            </p>
+            <p>
+                <textarea name="descripcion del producto" id="descripcion" cols="30" rows="10"> 
+                    Descripción del producto
+                </textarea>
+            </p>
+            <p>
+                <label for="sku">SKU:</label>
+                <input type="text" id="sku" name="00000" value="00000">
+            </p>
+            <p>
+                <label for="precio">Precio:</label>
+                <input type="number" id="precio" name="00000" value="$ 10000">
+            </p>
+            <p>
+                <label for="stock">Stock:</label>
+                <input type="number" id="stock" name="00000" value="1">
+            </p>
+            <p>
+                <label for="descuento">Descuento:</label>
+                <input type="number" id="descuento" name="00000" value="5 %">
+            </p>
+            <p>
+                <label for="cuotas"> 
+                    <span>Cuotas:</span>
+                </label> 
+                <select name="cuotas" id="cuotas">
+                     <option value="3">3 cuotas sin interes</option>
+                     <option value="6">6 cuotas sin interes</option>
+                     <option value="9">9 cuotas sin interes</option>
+
+                    </select>
+            </p>
+            <p>
+                <label for="imagenes">Imagenes:</label>
+                <input type="file" id="imagenes" name="imagenes">
+            </p>
+            <p>
+                <button type="button">Agregar producto</button>
+            </p>
+            <p>
+                <button type="reset">Limpiar</button>
+            </p>
+        </form>
+
+    </main>
+    <footer>
+        <section>
+            <nav>
+               <ul>
+                   <li><a href="./pages/shop.html">SHOP</a></li>
+                   <li><a href="./pages/register.html"></a>REGISTRARSE</li>
+                   <li><a href="./pages/login.html">LOGIN</a></li>
+                   <li><a href="./pages/contacto.html">CONTACTO</a></li>
+               </ul>
+               <picture>
+                   <img src="/img/branding/isotype.svg" alt="isotipo"> 
+               </picture>
+            </nav>
+      
+       </section>
+      
+       <section>
+           <p> All rights reserved 2023 - Funkoshop &copy; </p>
+       </section>
+    </footer>
+</body>
+</html>

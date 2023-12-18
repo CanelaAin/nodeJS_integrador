@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin-edit</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <picture>
+                <a href="./index.html">
+                    <img src="/img/branding/logo_light_horizontal.svg" alt="isologotipo">
+                </a>   
+            </picture>
+        
+            <ul>
+                <li>
+                    <a href="./pages/shop.html">Ver tienda</a>
+                </li>
+                <li>
+                    <a href="/pages/admin/admin.html">Admin</a>
+                </li>
+                <li>
+                    <a href="./pages/login.html">Salir</a>
+                </li>
+        
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>editar item</h1>
+        <form action="send" method="get">
+            <p>
+                <label for="categoria"> 
+                    <span>Categoria:</span>
+                </label> 
+                <select name="categoria" id="categoria">
+                     <option value="seleccionar">figuras</option>
+                </select>
+            </p>
+            <p>
+                <label for="licencia"> 
+                    <span>Licencia:</span>
+                </label> 
+                <select name="categorias" id="licencia">
+                     <option value="seleccionar">Naruto Shippuden</option>
+                </select>
+            </p>
+            <p>
+                <label for="nombre-producto"> 
+                    <span>Nombre del producto:</span>
+                </label>
+                <input type="text" id="nombre-producto" name="nombre-producto" value="Kakashi Hatake Shippuden Saga">
+            </p>
+            <p>
+                <textarea name="descripcion del producto" id="descripcion" cols="30" rows="10"> 
+                    Figura Funko coleccionable de Kakashi Hatake de la saga Naruto Shipudden invocando chidori.  
+                </textarea>
+            </p>
+            <p>
+                <label for="sku">SKU:</label>
+                <input type="text" id="sku" name="00000" value="NAR001012">
+            </p>
+            <p>
+                <label for="precio">Precio:</label>
+                <input type="number" id="precio" name="00000" value="$ 1.799,00">
+            </p>
+            <p>
+                <label for="stock">Stock:</label>
+                <input type="number" id="stock" name="00000" value="10">
+            </p>
+            <p>
+                <label for="descuento">Descuento:</label>
+                <input type="number" id="descuento" name="10%" value="10%">
+            </p>
+            <p>
+                <label for="cuotas"> 
+                    <span>Cuotas:</span>
+                </label> 
+                <select name="cuotas" id="cuotas">
+                     <option value="3">3 cuotas sin interes</option>
+                     <option value="6">6 cuotas sin interes</option>
+                     <option value="9">9 cuotas sin interes</option>
+
+                    </select>
+            </p>
+            <p>
+                <label for="imagenes">Imagenes:</label>
+                <input type="file" id="imagenes" name="imagenes">
+            </p>
+            <p>
+                <button type="button">Modificar producto</button>
+            </p>
+         <div>
+            <img src="/img/kakashi_hatake_front.png" alt="kakashi vista de frente">
+            <p>frente</p>
+            <img src="/img/kakashi_hatake_back.png" alt="kakashi vista trasera">
+            <p>dorso</p>
+         </div>
+        </form>
+    </main>
+    <footer>
+        <section>
+            <nav>
+               <ul>
+                   <li><a href="./pages/shop.html">SHOP</a></li>
+                   <li><a href="./pages/register.html"></a>REGISTRARSE</li>
+                   <li><a href="./pages/login.html">LOGIN</a></li>
+                   <li><a href="./pages/contacto.html">CONTACTO</a></li>
+               </ul>
+               <picture>
+                   <img src="/img/branding/isotype.svg" alt="isotipo"> 
+               </picture>
+            </nav>
+      
+       </section>
+      
+       <section>
+           <p> All rights reserved 2023 - Funkoshop &copy; </p>
+       </section>
+    </footer>
+    
+</body>
+</html>

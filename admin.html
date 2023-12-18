@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item | Funkoshop</title>
+    <link rel="stylesheet" href="/src/assets/css/index.css">
+</head>
+<body> 
+    <header> <!-- Inicio Header -->
+     </header> <!--   Fin Header -->
+    <main id="app">
+        <div class="container admin">
+            <div class="admin__busqueda">
+                <span><Icon icon="healthicons:magnifying-glass-outline" /></span>
+                <input type="text" name="adminInputBusqueda" id="iDadminInputBusqueda" placeholder="código, nombre o categoría" />
+            </div>    
+            <div class="admin__encabezado">
+                <h1>LISTADO DE PRODUCTOS</h1>
+                <a href="#">
+                    AGREGAR
+                    <span><Icon icon="basil:add-solid" color="red" width="39" /></span>
+                </a>
+            </div>
+            <div class="admin__listado">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Código</th>
+                            <th>Nombre de producto</th>
+                            <th>Categoría</th>
+                            <th>&nbsp;</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr v-for="item in items" class="listado__item">
+                            <td>{{ item['indice'] }}</td>
+                            <td>{{ item['indice'] }}</td>
+                            <td>{{ item.title }}</td>
+                            <td>{{ item.brand }}</td>
+                            <td class="item__options">
+                                <span><Icon icon="material-symbols:edit" color="blue" width="33" /></span>
+                                <span><Icon icon="ph:trash" color="red" width="33" /></span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    <footer>
+    </footer>
+    <script src="/src/js/admin.js"></script>
+    <script type="module" src="/src/js/vue.js"></script>
+</body>
+</html>
